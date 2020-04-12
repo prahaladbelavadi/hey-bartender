@@ -1,9 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class DataService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getRandom() {
+    return this.http.get(
+      "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+    );
+  }
 }
