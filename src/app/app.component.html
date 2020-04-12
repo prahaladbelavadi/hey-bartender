@@ -1,11 +1,10 @@
 <div class="container">
-  <div class="container-fluid text-center">
-
+  <div class="container-fluid text-center pt-4">
     <button type="button" class="btn btn-primary" (click)="getRandomDrink()">
       Click Here
     </button>
+    <hr>
     <div class="d-flex justify-content-center">
-
       <div *ngIf="drink">
         <div class="card" style="width: 18rem;">
           <img src="{{drink.strDrinkThumb}}" class="card-img-top" alt="...">
