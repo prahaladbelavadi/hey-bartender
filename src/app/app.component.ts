@@ -41,8 +41,6 @@ export class AppComponent {
           this.measures.push(element);
         }
       });
-      console.log("Ingredients", this.ingredients);
-      console.log("Measure", this.measures);
     });
   }
 
@@ -51,5 +49,9 @@ export class AppComponent {
     this.ingredients = [];
     this.measures = [];
     this.keys = [];
+  }
+
+  ngOnInit(): void {
+    this.getRandomDrink();
   }
 }
